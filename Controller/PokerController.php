@@ -25,7 +25,7 @@ class PokerController extends Controller
     public function welcome()
     {
 
-	 return $this->render('poker/welcome.html.twig');
+	 return $this->render('poker/welcome.html.twig', ['warning'   => ""]);
 
     }
 

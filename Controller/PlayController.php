@@ -44,8 +44,13 @@ private $session;
                     return $this->redirectToRoute('app_poker_number');
             }
 
-
+	
 	    $card =  (isset($_POST['card']))?$this->session->set('card', $_REQUEST['card']):$this->session->get('card');
+	   if($this->session->get('card') == "")
+		{
+            		return $this->render('poker/welcome.html.twig', ['warning'   => "You should select a card"]);
+		}
+
             $response = $this->pokerhelper->start($card);
 	    $row_cards = $this->session->get('saved_cards');
 	    return $this->render('poker/poker.html.twig', ['drafted_card'   => $response["drafted_card"],

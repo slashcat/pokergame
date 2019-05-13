@@ -1,0 +1,38 @@
+{# templates/poker/poker.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Test Application{% endblock %}</title>
+    </head>
+    <body>
+		
+	<form action="/poker/play" method="post">
+        <div id="sidebar">
+		<ul><li>{{message.message}} {{message.percent}}</li></ul>
+            {% block sidebar %}
+		{% if drafted_card != false %}
+		 <ul>
+                    <li>Draft<input type="submit" value="draft" name="draft" id="draft"></li>
+                </ul>
+		<ul><li> You selected the card  =  {{ selected_card }} </li></ul>
+		<ul><li> Selected Cards : </li></ul>
+		 {% for res in result %}
+		<ul>
+			<li> {{ res.suit }}{{ res.value }} - {{ res.full }}  </li>
+		</ul>
+    		{% endfor %}
+		{% else %}
+
+                <ul>
+                    <li>Choose a card: <input type="text" value="" name="card" id="card"><input type="submit" value="submit"></li>
+                </ul>
+		{% endif %}
+            {% endblock %}
+        </div>
+	</form>
+        <div id="content">
+            {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+{# src/Victortestmaster/Poker/view/poker.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Test Application{% endblock %}</title>
+    </head>
+    <body>
+		
+	<form action="/poker/play" method="post">
+        <div id="sidebar">
+            {% block sidebar %}
+		 <ul>
+                    <li>Welcome! Choose a card (2H,2Q,etc): <input type="text" value="" name="card" id="card"><input type="submit" value="submit"></li>
+                </ul>
+
+        </div>
+     {% endblock %}
+
+	</form>
+        <div id="content">
+            {% block body %}{% endblock %}
+        </div>
+    </body>
+</html>

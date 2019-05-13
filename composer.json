@@ -1,28 +1,14 @@
 {
-    "name": "victortestrepository/poker",
-    "description": "Allows reflection of object attributes, including inherited and non-public ones",
-    "homepage": "https://bitbucket.org/laestaciondepoder/test_letters",
-    "license": "BSD-3-Clause",
+    "name": "victortestmaster/poker",
+    "description": "test",
+    "version": "1.0.0",
+    "type": "test",
+    "minimum-stability": "dev",
     "authors": [
         {
-            "name": "Victor Albala",
+            "name": "slashcat",
             "email": "victoralbala@hotmail.com"
         }
-    ],
-    "require": {
-        "php": "^7.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^6.0"
-    },
-    "autoload": {
-        "classmap": [
-            "src/"
-        ]
-    },
-    "autoload-dev": {
-        "classmap": [
-            "tests/_fixture/"
-        ]
-    }
+    ]
 }
+ 
